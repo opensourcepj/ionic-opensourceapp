@@ -1,0 +1,17 @@
+<ion-view view-title="Github Events">
+
+<ion-content>
+  <button id="refresh" ng-click = "update()" class=" button button-positive  button-block icon ion-android-refresh "></button>
+  <ion-list>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="githubEvent in githubEvents"
+    type="item-text-wrap" href="#/app/github-user/{{githubEvent.actor.login}}">
+      <img ng-src="{{githubEvent.actor.avatar_url}}">
+      <h2>{{githubEvent.type}}</h2>
+      <p>{{githubEvent.actor.login}}</p>
+      <p>{{githubEvent.repo.name}}</p>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+</ion-view>

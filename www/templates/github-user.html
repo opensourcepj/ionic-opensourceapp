@@ -1,0 +1,25 @@
+<ion-view view-title="">
+  <ion-content class="padding">
+  <div class="list">
+    <a class="item item-icon-left" href="#">
+      <i class="icon ion-person"></i>
+      {{githubUser.name}}
+    </a>
+    <a class="item item-icon-left" ng-show = "githubUser.blog" href="#">
+      <i class="icon ion-home"></i>
+      {{githubUser.blog}}
+    </a>
+    <a class="item item-icon-left" href="#"  ng-show = "githubUser.location">
+      <i class="icon ion-location"></i>
+      {{githubUser.location}}
+    </a>
+    <a class="item item-icon-left" href="#" ng-show ="githubUser.email" >
+      <i class="icon ion-email"></i>
+      {{githubUser.email}}
+    </a>
+  </div>
+  <h2 class = "item item-text-wrap" ng-show = "githubUser.bio" ng-bind-html="githubUser.bio"></h2>
+  <a class="button button-full button-outline icon-right ion-navicon button-stable"
+      href="#/app/github-user-repos/{{githubUser.login}}" > User Repositories</a>
+  </ion-content>
+</ion-view>

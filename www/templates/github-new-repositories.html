@@ -1,0 +1,16 @@
+<ion-view view-title="{{title}}">
+<ion-content>
+  <button id="refresh" ng-click = "update()" class=" button button-positive  button-block icon ion-android-refresh "></button>
+  <ion-list>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="githubNewRepository in githubNewRepositories"
+    type="item-text-wrap" href="#/app/github-user/{{githubNewRepository.owner.login}}">
+      <img ng-src="{{githubNewRepository.owner.avatar_url}}">
+      <h2>{{githubNewRepository.full_name}}</h2>
+      <p>{{githubNewRepository.owner.login}}</p>
+      <p>{{githubNewRepository.description}}</p>
+      <p>{{githubNewRepository.created_at}}</p>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-view>
